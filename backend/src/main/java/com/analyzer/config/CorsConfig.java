@@ -13,11 +13,17 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**")
-                        .allowedOriginPatterns("http://localhost:*", "http://127.0.0.1:*")
+                registry.addMapping("/**")
+                        .allowedOriginPatterns(
+                                "https://social-media-content-analyzer-omega.vercel.app",
+                                "https://*.vercel.app",
+                                "http://localhost:*",
+                                "http://127.0.0.1:*",
+                                "*"
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
-                        .allowCredentials(true);
+                        .allowCredentials(false);
             }
         };
     }
