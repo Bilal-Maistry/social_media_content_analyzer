@@ -1,10 +1,10 @@
-# Social Media Content Analyzer 🚀
+# Social Media Content Analyzer 
 
 A full-stack AI-powered application that analyzes social media posts in PDF or image format, extracts formatted text, and provides AI engagement improvements, hook scoring, optimized rewrites, and hashtag recommendations.
 
 ---
 
-## 📝 Approach & Technical Architecture (200 Words Max)
+## 📝 Approach & Technical Architecture 
 
 The **Social Media Content Analyzer** is built with a **Java Spring Boot 3 REST API** backend and a **React + Tailwind CSS** frontend to deliver seamless, production-quality document analysis. 
 
@@ -18,26 +18,26 @@ The frontend features dynamic multi-stage loading states, tabbed dashboard visua
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-- 📄 **PDF Text Extraction**: Apache PDFBox parses multi-page PDFs while preserving spatial formatting.
-- 📷 **Image OCR Extraction**: Tess4J Tesseract OCR extracts text from image posts (PNG, JPG, WEBP, BMP).
-- 🧠 **AI Engagement Scoring**: Evaluates line 1 scroll-stop hook power, readability, and audience sentiment.
-- ✍️ **Optimized Post Rewrites**: Generates 3 style variations (Viral, B2B Professional, Punchy) with 1-click copy.
-- 🏷️ **Hashtag & CTA Optimizer**: Suggests platform-tailored hashtags and high-converting CTAs.
-- 📊 **Rich React Dashboard**: Metric cards, tabbed views, search filtering, and Markdown report export.
-- ⚡ **Zero-Config Ready**: Operates out-of-the-box using an intelligent local engine, with support for free LLM API keys (Gemini, Groq, OpenRouter).
+-  **PDF Text Extraction**: Apache PDFBox parses multi-page PDFs while preserving spatial formatting.
+-  **Image OCR Extraction**: Tess4J Tesseract OCR extracts text from image posts (PNG, JPG, WEBP, BMP).
+-  **AI Engagement Scoring**: Evaluates line 1 scroll-stop hook power, readability, and audience sentiment.
+-  **Optimized Post Rewrites**: Generates 3 style variations (Viral, B2B Professional, Punchy) with 1-click copy.
+-  **Hashtag & CTA Optimizer**: Suggests platform-tailored hashtags and high-converting CTAs.
+-  **Rich React Dashboard**: Metric cards, tabbed views, search filtering, and Markdown report export.
+-  **Zero-Config Ready**: Operates out-of-the-box using an intelligent local engine, with support for free LLM API keys (Gemini, Groq, OpenRouter).
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 - **Backend**: Java 17+, Spring Boot 3.2.3, Apache PDFBox 3.0.1, Tess4J 5.9.0, Maven.
 - **Frontend**: React 18, Vite, Tailwind CSS v3/v4, Lucide React Icons.
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - **Java Development Kit (JDK 17 or higher)**
