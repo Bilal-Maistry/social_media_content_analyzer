@@ -12,7 +12,7 @@ export default function App() {
   const [analysisData, setAnalysisData] = useState(null);
   const [errorMsg, setErrorMsg] = useState('');
 
-  const API_BASE_URL = 'http://localhost:8080/api';
+  const API_BASE_URL = 'https://social-media-content-analyzer-vqa5.onrender.com/api';
 
   const handleFileUpload = async (file) => {
     setLoading(true);
@@ -41,7 +41,7 @@ export default function App() {
       setAnalysisData(data);
     } catch (err) {
       console.error('API Error:', err);
-      setErrorMsg(err.message || 'Unable to connect to backend server. Make sure the Spring Boot application is running on port 8080.');
+      setErrorMsg(err.message || 'Unable to connect to backend server at https://social-media-content-analyzer-vqa5.onrender.com.');
     } finally {
       setLoading(false);
     }

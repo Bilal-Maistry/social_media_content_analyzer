@@ -10,7 +10,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+        target: 'https://social-media-content-analyzer-vqa5.onrender.com',
         changeOrigin: true,
       }
     }
