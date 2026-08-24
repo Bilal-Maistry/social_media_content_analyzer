@@ -26,7 +26,7 @@ public class AiEngagementService {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     /**
-     * Generates a precise AI content analysis (2-sentence summary, strict classification, 2 actionable improvements).
+     * Generates a precise AI content analysis (2-3 sentence cohesive summary, strict classification, 2 actionable improvements).
      * Evaluates actual text using Gemini 3.7 Flash API or local NLP fallback.
      */
     public AiAnalysisData analyzeContent(String text, String platform) {
@@ -66,10 +66,11 @@ public class AiEngagementService {
             String prompt = "You are a precise content classification and editing assistant. Analyze the input text for " + platform + ".\n"
                     + "Return ONLY a raw JSON object (no markdown, no code fences, no wrappers) with exact keys:\n"
                     + "{\n"
-                    + "  \"summary\": \"Concise 2-sentence summary of the core topic and main message.\",\n"
+                    + "  \"summary\": \"Cohesive summary of the core topic...\",\n"
                     + "  \"classification\": \"Informative\",\n"
                     + "  \"improvements\": [\"First brief actionable improvement suggestion.\", \"Second brief actionable improvement suggestion.\"]\n"
                     + "}\n\n"
+                    + "Rules for summary: Provide a clear, cohesive 2–3 sentence summary describing the primary context, key individuals or entities involved, and the core message or claim being made. Do NOT return raw headline fragments, titles, or isolated words.\n"
                     + "Rules for classification: Select strictly ONE from: 'Informative', 'Sensational/Rumor', 'Promotional'.\n"
                     + "Rules for improvements: Return exactly two brief, highly relevant actionable recommendations.\n\n"
                     + "TEXT TO ANALYZE:\n" + text;
