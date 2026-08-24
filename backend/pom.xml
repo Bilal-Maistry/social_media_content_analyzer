@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.3</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.analyzer</groupId>
+    <artifactId>social-media-analyzer</artifactId>
+    <version>1.0.0</version>
+    <name>Social Media Content Analyzer API</name>
+    <description>Backend REST API for extracting text from PDFs and images and generating AI engagement suggestions.</description>
+
+    <properties>
+        <java.version>17</java.version>
+        <pdfbox.version>3.0.1</pdfbox.version>
+        <tess4j.version>5.9.0</tess4j.version>
+    </properties>
+
+    <dependencies>
+        <!-- Spring Boot Web Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Apache PDFBox for PDF parsing -->
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>${pdfbox.version}</version>
+        </dependency>
+
+        <!-- Tess4J for OCR Image parsing -->
+        <dependency>
+            <groupId>net.sourceforge.tess4j</groupId>
+            <artifactId>tess4j</artifactId>
+            <version>${tess4j.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jul-to-slf4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- Commons IO for utility functions -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.15.1</version>
+        </dependency>
+
+        <!-- Spring Boot DevTools (Optional) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Spring Boot Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

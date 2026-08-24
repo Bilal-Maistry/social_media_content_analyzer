@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production & Build Artifacts
+frontend/dist/
+frontend/build/
+backend/target/
+*.class
+*.jar
+
+# Environment & Sensitive files
+.env
+.env.local
+.env.*.local
+*.log
+application.properties
+**/application.properties
+
+# Editor & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
