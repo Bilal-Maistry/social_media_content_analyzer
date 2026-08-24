@@ -63,7 +63,7 @@ npm run dev
 
 ---
 
-## 📡 REST API Documentation
+##  REST API Documentation
 
 ### `POST /api/analyze`
 Accepts multipart form uploads for PDF or Image documents.
@@ -105,7 +105,7 @@ Accepts multipart form uploads for PDF or Image documents.
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 Social_Media_content_analyser/
